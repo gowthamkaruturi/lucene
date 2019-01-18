@@ -49,6 +49,12 @@ public class LuceneTester {
          Document doc = searcher.getDocument(scoreDoc);
             System.out.println("File: "
             + doc.get(LuceneConstants.FILE_PATH));
+           String[] st=doc.getValues(searchQuery)	;
+           
+           for(String str :st)
+           {
+        	   System.out.println("values"+str);
+           }
       }  
    }
 }

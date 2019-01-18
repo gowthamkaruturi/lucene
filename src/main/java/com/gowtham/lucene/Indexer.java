@@ -56,19 +56,18 @@ public class Indexer {
 
    public int createIndex(String dataDirPath, FileFilter filter) 
       throws IOException {
-      File[] files = new File(dataDirPath).listFiles();
-
-       System.out.println(files.length);
-      for (File file : files) {
+      /*File[] files = new File(dataDirPath).listFiles();*/
+      	File file = new File("D:\\Lucene\\lucene\\index\\gowtham.txt");
+      /*for (File file : files) {
          if(!file.isDirectory()
             && !file.isHidden()
             && file.exists()
             && file.canRead()
             && filter.accept(file)
-         ){
+         ){*/
             indexFile(file);
-         }
-      }
+         /*}
+      }*/
       return writer.numDocs();
    }
 }
